@@ -1,0 +1,34 @@
+<idea-plugin version="2">
+    <id>by.vkatz.decorate_mode_switcher</id>
+    <name>Window Decorate Mode Switcher</name>
+    <version>1.1</version>
+    <vendor email="vkatsubo@gmail.com" url="http://www.vk.com/vkatz">VKatz</vendor>
+
+    <description><![CDATA[
+      Hide title menu for windows<br>
+      Possible issues with fullscreen mode after switching.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="131"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable instance="by.vkatz.Configuration" displayName="Switch decorate mode"/>
+    </extensions>
+
+    <project-components>
+        <component>
+            <implementation-class>by.vkatz.FrameInitializer</implementation-class>
+        </component>
+    </project-components>
+
+    <actions>
+        <action id="by.vkatz.decorate_mode_switcher" class="by.vkatz.DecorateModeSwitcher" text="Switch decorate mode" icon="/by/vkatz/icon.png">
+            <add-to-group group-id="ViewMenu" anchor="after" relative-to-action="ToggleFullScreenGroup"/>
+        </action>
+    </actions>
+
+</idea-plugin>
