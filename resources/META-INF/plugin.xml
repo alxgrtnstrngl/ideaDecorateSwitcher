@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>by.vkatz.decorate_mode_switcher</id>
     <name>Window Decorate Mode Switcher</name>
-    <version>2.0</version>
-    <vendor email="vkatsubo@gmail.com" url="">YourCompany</vendor>
+    <version>2.1</version>
+    <vendor email="vkatsubo@gmail.com">vKatz</vendor>
     <description><![CDATA[
       Hide title menu for windows<br>
       Possible issues with fullscreen mode after switching.<br>
