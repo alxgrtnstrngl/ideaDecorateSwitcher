@@ -7,7 +7,7 @@ import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Created by vKatz on 02.03.2015.
+ * Created by vKatz on 06.11.2017
  */
 public class FrameInitializer implements ProjectComponent {
     private Project project;
@@ -28,8 +28,10 @@ public class FrameInitializer implements ProjectComponent {
     }
 
     public void projectOpened() {
-        PropertiesComponent properties = PropertiesComponent.getInstance();
-        ((DecorateModeSwitcher) ActionManager.getInstance().getAction("by.vkatz.decorate_mode_switcher")).setMode(project, properties.getBoolean(Configuration.AUTO_RUN, false));
+        ((DecorateModeSwitcher) ActionManager.getInstance()
+                .getAction("by.vkatz.decorate_mode_switcher"))
+                .setMode(project, PropertiesComponent.getInstance()
+                        .getBoolean(Configuration.AUTO_RUN, false));
     }
 
     public void projectClosed() {
